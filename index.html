@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body{
+            background-color: tomato;
+            text-align: center;
+            font-family: cursive;
+        }
+        div{
+            margin-top: 10%;
+        }
+        h1{
+            color: rgb(255, 255, 255);
+        }
+        input{
+            width: 40%;
+            height: 45px;
+            border: none;
+            border-radius: 20px;
+        }
+        button{
+            width: 100px;
+            height: 35px;
+        }
+    </style>
+<body>
+    <div>
+        <p id="par"></p>
+        <h1>Calculatrice de pourcentage / remise (%) </h1>
+        <p>Prix original + pourcentage => prix final après remise.</p>
+    
+            <label for="">Entrer le prix original: </label><br>
+            <input type="number"  id="prix" placeholder="Prix en FCFA"><br>
+            <label for="">Remise (%): </label><br>
+            <input type="number" name="" id="remise" placeholder="Remise en %" ><br><br>
+
+            <button type="button" onclick=afficher() >Clique</button>
+        <p id="parametre"></p> 
+
+    </div>
+    
+
+    <script>
+               
+        var prix_original = document.getElementById('prix');
+        var rem = document.getElementById('remise');
+        var sortie = document.getElementById("par");
+        var x;
+        var y;
+
+
+       
+
+        prix_original.addEventListener('input',one);
+        function one(){
+            //  document.getElementById('parametre').innerText = this.value;
+            x = Number(this.value);
+           return(x);
+        }
+
+
+
+        rem.addEventListener('input', function(){
+            // document.getElementById('para').innerText = this.value;
+            y = Number(this.value);
+            return(y);
+         })
+        
+        function afficher(){
+            somme = x-(x*y)/100;
+            document.getElementById('parametre').innerHTML = 'Prix final après remise: ' + somme;
+        }
+
+
+    </script>
+
+    
+
+</html>
