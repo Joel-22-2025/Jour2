@@ -2,8 +2,6 @@ const cacheName = 'remise-cache-v1';
 const filesToCache = [
   './',
   './index.html',
-  './style.css',
-  './app.js',
   './manifest.json',
   './icons/icon-192.png',
   './icons/icon-512.png'
